@@ -339,9 +339,7 @@
 	});
 	
 
-})(jQuery);
-
-document.querySelectorAll('.social_list a').forEach(link => {
+document.querySelectorAll('.awilo_fn_portfolio_grid .social_list a').forEach(link => {
   link.addEventListener('click', function(e){
     e.stopPropagation();
     window.open(this.href, '_blank');
