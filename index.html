@@ -791,15 +791,20 @@ function isMobile() {
 
 videos.forEach(video => {
 
-  // Always remove HTML autoplay
+  // ✅ EXCEPTION: Skip special autoplay videos
+  if (video.classList.contains('autoplay-video')) {
+    return; // Do nothing — let it autoplay normally
+  }
+
+  // Remove default autoplay from other videos
   video.removeAttribute('autoplay');
 
-  // 📱 Mobile autoplay
+  // 📱 Mobile autoplay (for non-exception videos)
   if (isMobile()) {
     video.play().catch(() => {});
   }
 
-  // 🖥 Desktop hover play
+  // 🖥 Desktop hover behavior
   video.addEventListener('mouseenter', () => {
     if (!isMobile()) {
       video.currentTime = 0;
@@ -832,6 +837,7 @@ videos.forEach(video => {
 </body>
 
 </html>
+
 
 
 
