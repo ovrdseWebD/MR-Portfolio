@@ -4,7 +4,7 @@
 /*	01) BASE
 /*---------------------------------------------------*/
 
-.awilo_fn_abs_img {
+.img_holder video {
   pointer-events: none;
 }
 
@@ -2077,3 +2077,4 @@ a.awilo_fn_circle_link:hover:after{
 	}
 
 }
+
