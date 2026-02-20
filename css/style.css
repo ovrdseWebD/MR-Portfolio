@@ -4,6 +4,10 @@
 /*	01) BASE
 /*---------------------------------------------------*/
 
+.awilo_fn_abs_img {
+  pointer-events: none;
+}
+
 html {
 	overflow-x: hidden;
 	padding: 0px;
@@ -2071,4 +2075,5 @@ a.awilo_fn_circle_link:hover:after{
 	.awilo_fn_title h3{
 		font-size: 30px;
 	}
+
 }
