@@ -326,3 +326,9 @@
 	
 
 })(jQuery);
+
+document.querySelectorAll('.awilo_fn_portfolio_grid a').forEach(link => {
+  link.addEventListener('click', function(e){
+    e.stopPropagation();
+  });
+});
