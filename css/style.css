@@ -4,10 +4,6 @@
 /*	01) BASE
 /*---------------------------------------------------*/
 
-.img_holder video {
-  pointer-events: none;
-}
-
 html {
 	overflow-x: hidden;
 	padding: 0px;
@@ -2077,4 +2073,5 @@ a.awilo_fn_circle_link:hover:after{
 	}
 
 }
+
 
