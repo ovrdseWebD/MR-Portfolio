@@ -4,6 +4,15 @@
 /*	01) BASE
 /*---------------------------------------------------*/
 
+.awilo_fn_portfolio_grid .title_holder {
+  position: relative;
+  z-index: 20;
+}
+
+.awilo_fn_portfolio_grid .img_holder {
+  z-index: 1;
+}
+
 html {
 	overflow-x: hidden;
 	padding: 0px;
@@ -2073,4 +2082,5 @@ a.awilo_fn_circle_link:hover:after{
 	}
 
 }
+
 
