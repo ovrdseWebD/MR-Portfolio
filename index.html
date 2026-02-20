@@ -782,22 +782,34 @@
 <script src="js/init.js"></script>
 
 <script>
-  const videos = document.querySelectorAll('.awilo_fn_abs_img video');
+	
+const videos = document.querySelectorAll('.awilo_fn_abs_img video');
 
-  videos.forEach(video => {
+videos.forEach(video => {
 
-	// Skip autoplay video
-    if (video.classList.contains('autoplay-video')) return;
+  // Skip main autoplay one
+  if (video.classList.contains('autoplay-video')) return;
 
-    video.addEventListener('mouseenter', () => {
-      video.play();
-    });
-
-    video.addEventListener('mouseleave', () => {
-      video.pause();
-// optional: reset to start
-    });
+  // Desktop hover
+  video.addEventListener('mouseenter', () => {
+    video.play();
   });
+
+  video.addEventListener('mouseleave', () => {
+    video.pause();
+  });
+
+  // Mobile tap
+  video.addEventListener('click', () => {
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  });
+
+});
+	
 </script>
 
 <script>
@@ -814,5 +826,6 @@
 </body>
 
 </html>
+
 
 
