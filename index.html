@@ -332,7 +332,7 @@
     <div class="img_holder">
       <img src="./img/thumb/thumb-420-420.jpg" alt="" />
       <div class="awilo_fn_abs_img">
-        <video autoplay muted loop playsinline preload="auto">
+        <video muted loop playsinline preload="metadata">
           <source src="./img/portfolio/5.mp4" type="video/mp4">
         </video>
       </div>
@@ -362,7 +362,7 @@
     <div class="img_holder">
       <img src="./img/thumb/thumb-420-420.jpg" alt="" />
       <div class="awilo_fn_abs_img">
-        <video autoplay muted loop playsinline preload="auto">
+        <video muted loop playsinline preload="metadata">
           <source src="./img/portfolio/4.mp4" type="video/mp4">
         </video>
       </div>
@@ -392,7 +392,7 @@
     <div class="img_holder">
       <img src="./img/thumb/thumb-420-420.jpg" alt="" />
       <div class="awilo_fn_abs_img">
-        <video autoplay muted loop playsinline preload="auto">
+        <video muted loop playsinline preload="metadata">
           <source src="./img/portfolio/6.mp4" type="video/mp4">
         </video>
       </div>
@@ -422,7 +422,7 @@
     <div class="img_holder">
       <img src="./img/thumb/thumb-420-420.jpg" alt="" />
       <div class="awilo_fn_abs_img">
-        <video autoplay muted loop playsinline preload="auto">
+        <video muted loop playsinline preload="metadata">
           <source src="./img/portfolio/2.mp4" type="video/mp4">
         </video>
       </div>
@@ -452,7 +452,7 @@
     <div class="img_holder">
       <img src="./img/thumb/thumb-420-420.jpg" alt="" />
       <div class="awilo_fn_abs_img">
-        <video autoplay muted loop playsinline preload="auto">
+        <video muted loop playsinline preload="metadata">
           <source src="./img/portfolio/3.mp4" type="video/mp4">
         </video>
       </div>
@@ -787,28 +787,17 @@ const videos = document.querySelectorAll('.awilo_fn_abs_img video');
 
 videos.forEach(video => {
 
-  // Desktop hover
+  // Make sure autoplay is off
+  video.removeAttribute('autoplay');
+
   video.addEventListener('mouseenter', () => {
-    if (window.innerWidth > 768) {
-      video.play();
-    }
+    video.currentTime = 0; // optional: restart from beginning
+    video.play();
   });
 
   video.addEventListener('mouseleave', () => {
-    if (window.innerWidth > 768) {
-      video.pause();
-    }
-  });
-
-  // Mobile tap
-  video.addEventListener('click', () => {
-    if (window.innerWidth <= 768) {
-      if (video.paused) {
-        video.play();
-      } else {
-        video.pause();
-      }
-    }
+    video.pause();
+    video.currentTime = 0; // optional: reset when leaving
   });
 
 });
@@ -829,6 +818,7 @@ videos.forEach(video => {
 </body>
 
 </html>
+
 
 
 
