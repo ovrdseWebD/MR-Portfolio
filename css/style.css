@@ -4,13 +4,9 @@
 /*	01) BASE
 /*---------------------------------------------------*/
 
-.awilo_fn_portfolio_grid .title_holder {
+.awilo_fn_portfolio_grid .title_holder a {
   position: relative;
-  z-index: 20;
-}
-
-.awilo_fn_portfolio_grid .img_holder {
-  z-index: 1;
+  z-index: 9999;
 }
 
 html {
@@ -2082,5 +2078,6 @@ a.awilo_fn_circle_link:hover:after{
 	}
 
 }
+
 
 
