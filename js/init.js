@@ -76,8 +76,22 @@
 			});
 		},
 		anchor: function(){
-			$('a[href*="#"]').not('[href="#"]').not('[href="#0"]').not('[href="#!"]').click(function(e){if(location.pathname.replace(/^\//,"")===this.pathname.replace(/^\//,"")&&location.hostname===this.hostname){var t=$(this.hash);(t=t.length?t:$("[name="+this.hash.slice(1)+"]")).length&&(e.preventDefault(),$("html, body").animate({scrollTop:t.offset().top},1e3,function(){var e=$(t);return!1;e.attr("tabindex","-1")}))}});
-		},
+  $('a[href^="#"]').not('[href="#"]').not('[href="#0"]').not('[href="#!"]').click(function(e){
+    if(location.pathname.replace(/^\//,"") === this.pathname.replace(/^\//,"") 
+      && location.hostname === this.hostname){
+
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
+      if(target.length){
+        e.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+      }
+    }
+  });
+},
 		jarallax: function(){
 			jQuery('.jarallax').each(function(){
 				var element			= jQuery(this);
@@ -324,4 +338,5 @@
 		Awilo.portfOlioMasonry();
 	});
 	
+
 })(jQuery);
