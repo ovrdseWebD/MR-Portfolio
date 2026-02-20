@@ -324,4 +324,12 @@
 		Awilo.portfOlioMasonry();
 	});
 	
+
 })(jQuery);
+
+document.querySelectorAll('.awilo_fn_portfolio_grid .awilo_fn_circle_link, .awilo_fn_portfolio_grid h3 a')
+.forEach(link => {
+  link.addEventListener('click', function(e){
+    e.stopImmediatePropagation();
+  }, true);
+});
