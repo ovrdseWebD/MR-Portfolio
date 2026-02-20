@@ -785,19 +785,33 @@
 	
 const videos = document.querySelectorAll('.awilo_fn_abs_img video');
 
+function isMobile() {
+  return window.innerWidth <= 768;
+}
+
 videos.forEach(video => {
 
-  // Make sure autoplay is off
+  // Always remove HTML autoplay
   video.removeAttribute('autoplay');
 
+  // 📱 Mobile autoplay
+  if (isMobile()) {
+    video.play().catch(() => {});
+  }
+
+  // 🖥 Desktop hover play
   video.addEventListener('mouseenter', () => {
-    video.currentTime = 0; // optional: restart from beginning
-    video.play();
+    if (!isMobile()) {
+      video.currentTime = 0;
+      video.play();
+    }
   });
 
   video.addEventListener('mouseleave', () => {
-    video.pause();
-    video.currentTime = 0; // optional: reset when leaving
+    if (!isMobile()) {
+      video.pause();
+      video.currentTime = 0;
+    }
   });
 
 });
@@ -818,6 +832,7 @@ videos.forEach(video => {
 </body>
 
 </html>
+
 
 
 
