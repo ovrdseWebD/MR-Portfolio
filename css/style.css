@@ -934,15 +934,11 @@ a.awilo_fn_circle_link:hover:after{
 	transition: all 1.4s ease;
 }
 .awilo_fn_portfolio_grid .list_item .title_holder .title_abs div{
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: #d5e6e075;
-	border-radius: 5px;
-	position: absolute !important;
+  position: absolute !important;
+  inset: 6px; /* controls spacing from edges */
+  background-color: rgba(213, 230, 224, 0.45);
+  backdrop-filter: blur(2px);
+  border-radius: 8px;
 }
 .awilo_fn_portfolio_grid .list_item:hover .title_holder{
 	transform: translate3d(-50%,-50%,0) scale(1);
@@ -2077,6 +2073,7 @@ a.awilo_fn_circle_link:hover:after{
 	}
 
 }
+
 
 
 
