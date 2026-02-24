@@ -1,2 +1,2 @@
 # Mark-Rosales-Portfolio
-Versatile Creative: Graphic &amp; Web Designer, Developer, Imaging Specialist
+Welcome to my graphic/web design portfolio!!!
