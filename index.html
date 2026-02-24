@@ -32,6 +32,14 @@
 </head>
 
 <body>
+
+<!-- SITE LOADER -->
+<div id="site-loader">
+  <div class="loader-inner">
+    <div class="spinner"></div>
+  </div>
+</div>
+	
 <!-- WRAPPER ALL -->
 <div class="awilo_fn_wrapper">
 	
@@ -832,11 +840,35 @@ videos.forEach(video => {
   });
 </script>
 
+<script>
+  document.querySelectorAll("a").forEach(link => {
+    if (link.hostname !== window.location.hostname) {
+      link.setAttribute("target", "_blank");
+      link.setAttribute("rel", "noopener noreferrer");
+    }
+  });
+</script>
+
+<script>
+window.addEventListener("load", function () {
+
+  const loader = document.getElementById("site-loader");
+  const wrapper = document.querySelector(".awilo_fn_wrapper");
+
+  setTimeout(() => {
+    loader.classList.add("hide");
+    wrapper.style.opacity = "1";
+  }, 300); // small delay makes it smoother
+
+});
+</script>	
+	
 <!-- /SCRIPTS -->
 
 </body>
 
 </html>
+
 
 
 
