@@ -2114,6 +2114,19 @@ a.awilo_fn_circle_link:hover:after{
 
 }
 
+@media (max-width: 768px) {
+  .awilo_fn_portfolio_grid .awilo_fn_masonry_in {
+    width: 50% !important;
+  }
+
+  .awilo_fn_portfolio_grid .tmwide66,
+  .awilo_fn_portfolio_grid .tmwide50,
+  .awilo_fn_portfolio_grid .tmwide33 {
+    width: 50% !important;
+  }
+}
+
+
 
 
 
