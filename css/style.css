@@ -2103,28 +2103,8 @@ a.awilo_fn_circle_link:hover:after{
 		margin: 2px 0;
 	}
 }
-@media(max-width: 480px){
-	.awilo_fn_header{
-		padding: 5px 10px;
-	}
-	.awilo_fn_blog_list .title_wrapper .title_holder h3{font-size: 24px;}
-	.awilo_fn_title h3{
-		font-size: 30px;
-	}
 
-}
 
-@media (max-width: 768px) {
-  .awilo_fn_portfolio_grid .awilo_fn_masonry_in {
-    width: 50% !important;
-  }
-
-  .awilo_fn_portfolio_grid .tmwide66,
-  .awilo_fn_portfolio_grid .tmwide50,
-  .awilo_fn_portfolio_grid .tmwide33 {
-    width: 50% !important;
-  }
-}
 
 
 
