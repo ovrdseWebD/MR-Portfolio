@@ -991,6 +991,69 @@ setInterval(() => {
   document.querySelector(".rotating-word").textContent = words[i];
 }, 750);
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const wrapper = document.querySelector(".awilo_fn_wrapper");
+    const sidebar = document.querySelector(".awilo_fn_sidebar_header");
+    const hamburger = document.querySelector(".hamburger");
+    const menuLinks = document.querySelectorAll(".vert_nav a");
+
+    /* --------------------------------------------------
+    CLOSE MENU FUNCTION
+    -------------------------------------------------- */
+    function closeMenu(){
+        if(wrapper) wrapper.classList.remove("opened");
+        if(hamburger) hamburger.classList.remove("is-active");
+    }
+
+    /* --------------------------------------------------
+    CLOSE WHEN MENU LINK CLICKED
+    -------------------------------------------------- */
+    menuLinks.forEach(link => {
+        link.addEventListener("click", closeMenu);
+    });
+
+    /* --------------------------------------------------
+    CLOSE WHEN CLICKING OUTSIDE SIDEBAR
+    -------------------------------------------------- */
+    document.addEventListener("click", function(e){
+        if(!sidebar.contains(e.target) && 
+           !hamburger.contains(e.target)){
+            closeMenu();
+        }
+    });
+
+    /* --------------------------------------------------
+    MOBILE SWIPE CLOSE (SUPER PREMIUM UX ⭐)
+    -------------------------------------------------- */
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    sidebar.addEventListener("touchstart", e => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+
+    sidebar.addEventListener("touchend", e => {
+        touchEndX = e.changedTouches[0].screenX;
+
+        // Swipe left = close menu
+        if(touchStartX - touchEndX > 70){
+            closeMenu();
+        }
+    });
+
+    /* --------------------------------------------------
+    AUTO CLOSE ON SCROLL (Optional but classy)
+    -------------------------------------------------- */
+    window.addEventListener("scroll", () => {
+        if(window.scrollY > 420){
+            closeMenu();
+        }
+    });
+
+});
+</script>	
 
 <!-- /SCRIPTS -->
 
@@ -998,6 +1061,7 @@ setInterval(() => {
 </body>
 
 </html>
+
 
 
 
