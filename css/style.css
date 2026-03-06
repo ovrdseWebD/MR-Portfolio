@@ -67,6 +67,29 @@
 
 }
 
+.about_right {
+    display: flex;
+    justify-content: flex-end; /* keep desktop positioning */
+}
+
+@media (max-width: 768px) {
+    .about_right {
+        justify-content: center;
+        width: 100%;
+    }
+
+    #scene {
+        transform: none !important; /* prevents mobile parallax glitches */
+        margin: 0 auto;
+    }
+
+    .about_img,
+    .about_border {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
 .list_item {
   display: block;
 }
@@ -2129,6 +2152,7 @@ a.awilo_fn_circle_link:hover:after{
 	}
 
 }
+
 
 
 
