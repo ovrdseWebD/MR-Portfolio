@@ -104,10 +104,14 @@
 							<div class="l_inner">
 								<div class="about_title">
 									<h5>Smile, it changes everything.</h5>
-									<h3>I’m Mark Rosales, graphic designer based in Canada.</h3>
+								<h3>
+I design <br>
+<span class="rotating-word">logos</span> <br>
+that help businesses <br>
+stand out.
 								</div>
 								<div class="about_desc">
-									<p>I blend hustle, heart, and imagination into everything I do. Equal parts workhorse and idea machine, I bring good vibes, fresh thinking, and just enough humor to keep the team smiling (and on schedule).</p>
+									<p>I blend creativity, strategy, and hard work into every project. I love turning ideas into strong brands, thoughtful logos, and modern websites that help businesses stand out.</p>
 								</div>
 								<div class="about_btn">
 									<a href="https://drive.google.com/file/d/1sAbhyr-ynQUnOtsRitMtTOp0DJKcdyyg/view?usp=drive_link" class="awilo_fn_main_button">
@@ -903,11 +907,12 @@
 				<div class="footer_in">
 					<div class="footer_desc">
 						<div class="container wide">
+							<span class="awilo_fn_totop"></span>
 							<p>Copyright 2026. Mark Rosales  —  Privacy Policy</p>
 						</div>
 					</div>
 					
-					<span class="awilo_fn_totop"></span>
+					
 					
 				</div>
 			</div>
@@ -978,19 +983,19 @@ window.addEventListener("load", function () {
 </script>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  const videos = document.querySelectorAll("video");
-  videos.forEach(video => {
-    video.muted = true;
-    video.play().catch(() => {});
-  });
-});
-</script>	
+const words = ["logos", "brands", "websites"];
+let i = 0;
+
+setInterval(() => {
+  i = (i + 1) % words.length;
+  document.querySelector(".rotating-word").textContent = words[i];
+}, 750);
+</script>
 
 <!-- /SCRIPTS -->
+
 
 </body>
 
 </html>
-
 
