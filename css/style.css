@@ -188,7 +188,7 @@ a.awilo_fn_circle_link:hover:after{
 	bottom: 0px;
 	right: -400px;
 	background-color: #13362F;
-	box-shadow: -10px 0px 10px rgba(0,0,0,0.1);
+	
 	z-index: 100;
 	
 	-webkit-transition: all .3s ease;
@@ -2129,6 +2129,7 @@ a.awilo_fn_circle_link:hover:after{
 	}
 
 }
+
 
 
 
