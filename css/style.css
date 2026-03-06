@@ -4,7 +4,6 @@
 /*	01) BASE
 /*---------------------------------------------------*/
 
-/* Hide bg on small screen*/
 @media (max-width: 1880px) {
   body {
     background-image: none !important;
@@ -50,6 +49,23 @@
   visibility: hidden;
 }
 
+.rotating-word {
+  color: #d5e7e1;
+  font: inherit;
+  display: inline-block;
+  min-width: 110px;
+  -webkit-text-stroke: 0.5px #12362e;
+}
+
+.stand-out {
+  color: #d5e7e1;
+  font: inherit;
+  display: inline-block;
+  min-width: 110px;
+  -webkit-text-stroke: 0.5px #12362e;
+  transform: skewX(-18deg);
+
+}
 
 .list_item {
   display: block;
@@ -2103,11 +2119,16 @@ a.awilo_fn_circle_link:hover:after{
 		margin: 2px 0;
 	}
 }
+@media(max-width: 480px){
+	.awilo_fn_header{
+		padding: 5px 10px;
+	}
+	.awilo_fn_blog_list .title_wrapper .title_holder h3{font-size: 24px;}
+	.awilo_fn_title h3{
+		font-size: 30px;
+	}
 
-
-
-
-
+}
 
 
 
